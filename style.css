@@ -1,9 +1,38 @@
-#form-data{
-
-    margin: 200px 600px;
-
+* {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/007/164/537/original/fingerprint-identity-sensor-data-protection-system-podium-hologram-blue-light-and-concept-free-vector.jpg");
 }
 
-.btn{
-   margin-left: 110px;
+#form-data {
+  margin: 200px 600px;
+}
+
+.btn {
+  margin-left: 110px;
+}
+
+label{
+    color: white;
+}
+input{
+    color: white;
+}
+#name{
+    color: white;
+}
+#email{
+    color: white;
+}
+#password{
+    color: white;
+}
+#conf-password{
+    color: white;
+}
+#message{
+    background-color: white;
+    color: red;
+}
+h1{
+    color: white;
+    text-align: center;
 }

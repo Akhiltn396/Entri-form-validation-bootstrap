@@ -11,13 +11,13 @@
 </head>
 <body>
     <form id="form-data" action="news/home.html" onsubmit="return handleSubmit() ">
-      <h1 >Login Page</h1>
+      <h1 >Register Page</h1>
 
         <div id="message"  class="alert alert-danger" style="display: none;">This is an error msg</div>
-        <!-- <div class="form-group">
+        <div class="form-group">
             <label for="exampleInputUsername1">Username</label>
             <input type="text" class="form-control" id="name" placeholder="Username">
-          </div> -->
+          </div>
 
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
@@ -27,10 +27,10 @@
           <label for="exampleInputPassword1">Password</label>
           <input type="password" class="form-control" id="password" placeholder="Password">
         </div>
-        <!-- <div class="form-group">
+        <div class="form-group">
             <label for="exampleInputPassword1">Confirm Password</label>
             <input type="password" class="form-control" id="conf-password" placeholder="Confirm Password">
-          </div> -->
+          </div>
 
 
         <br>
@@ -44,20 +44,20 @@
 <script type="text/javascript">
     const url = "http://127.0.0.1:3000/toverify";
     function handleSubmit() {
-        // const name = document.getElementById('name').value;
+        const name = document.getElementById('name').value;
         const message = document.getElementById('message');
         const password = document.getElementById('password').value;
-        // const confPassword = document.getElementById('conf-password').value;
+        const confPassword = document.getElementById('conf-password').value;
         const email = document.getElementById('email').value;
 
 
         message.style.display= "none"
 
-        // if(name.length === 0){
-        // message.innerText = "Please type the full name";
-        // message.style.display = "block"
-        // return false
-        // }
+        if(name.length === 0){
+        message.innerText = "Please type the full name";
+        message.style.display = "block"
+        return false
+        }
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) == false){
         message.innerText = "Please enter valid email address";
         message.style.display = "block"
@@ -69,16 +69,16 @@
         message.style.display = "block"
         return false
         }
-        // if(confPassword.length < 8){
-        // message.innerText = "Confirm Password must be more than 8 characters";
-        // message.style.display = "block"
-        // return false
-        // }
-        // if(confPassword != password){
-        // message.innerText = "Password not matching";
-        // message.style.display = "block"
-        // return false
-        // }
+        if(confPassword.length < 8){
+        message.innerText = "Confirm Password must be more than 8 characters";
+        message.style.display = "block"
+        return false
+        }
+        if(confPassword != password){
+        message.innerText = "Password not matching";
+        message.style.display = "block"
+        return false
+        }
         // alert("Success")
         // return false //To stop reloading or stop propogation
 
